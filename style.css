@@ -1,0 +1,108 @@
+#div{
+    background-color: #303030;
+    padding: 100px;
+    margin-top: -10px;
+    margin-left: -10px;
+    margin-right: -10px;
+    color: #FFFFFF;
+    font-size: 40px;
+}
+#div2{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Três colunas de igual largura */
+    gap: 2px; /* Espaçamento entre as colunas */
+    padding: 50px;
+    background-color: #FFFFFF;
+    text-align: center; /* Centraliza o texto dentro de cada coluna */
+    font-size: 55px;
+    text-align: center;
+    margin-top: 50px;
+}
+#div3{
+    margin-top: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 300px; /* Defina a altura total desejada */
+    font-size: 37px;
+    width: 100%;
+    margin-left: 60px;
+}
+.div4{
+    margin-top: -600px;
+    margin-left: 1000px;
+    padding: 300px;
+    padding-bottom: 150px;
+    padding-top: 100px;
+    padding-left: 100px;
+    flex-direction: column;
+    width: 40%;
+    height: auto;
+    position: relative; 
+}
+
+.div4 img {
+    width: 100%;  
+    height: auto; 
+}
+.div5{
+    width: 100%;
+    height: 638px;
+    top: 1478px;   
+    background-color: #303030; 
+    font-size: 35px;
+    text-align: center;   
+}
+.div5 h2 {
+    font-size: 50px;
+    text-align: center;
+    padding-top: 100px;  /* Ajuste o valor conforme necessário */
+    color: #FFFFFF;
+    margin-top: 0px;
+}
+.div5 {
+    width: 100%;
+    height: 638px;
+    top: 1478px;
+    background-color: #303030;
+    font-size: 35px;
+    text-align: center;
+    padding-top: 100px;
+    color: white;
+    display: flex;            /* Usando flexbox para alinhar os elementos */
+    flex-direction: column;   /* Empilha os inputs na vertical */
+    align-items: center;      /* Centraliza os itens horizontalmente */
+}
+
+.div5 input {
+    width: 30%;              /* Aumenta a largura dos inputs */
+    height: 40px;            /* Aumenta a altura dos inputs */
+    padding: 10px;           /* Adiciona um pouco de preenchimento dentro dos inputs */
+    margin: 15px 0;          /* Espaço entre os inputs */
+    font-size: 18px;         /* Aumenta o tamanho da fonte dentro dos inputs */
+    border: 2px solid #fff;
+    border-radius: 5px;
+    background-color: #e7dddd;
+    color: rgb(0, 0, 0);
+}
+
+.div5 input::placeholder {
+    color: #bbb;
+}
+.submit-btn {
+    background-color: #C07212;  /* Cor do fundo do botão */
+    color: white;                /* Cor do texto do botão */
+    font-size: 18px;             /* Tamanho da fonte */
+    padding: 10px 20px;          /* Preenchimento interno do botão */
+    border: none;                /* Remove a borda padrão */
+    border-radius: 5px;          /* Bordas arredondadas */
+    cursor: pointer;            /* Cursor de mãozinha para indicar interatividade */
+    margin-top: 20px;            /* Espaço entre os inputs e o botão */
+    width: 30%;                  /* Largura do botão */
+    text-align: center;          /* Alinha o texto no centro do botão */
+}
+
+/* Efeito visual ao passar o mouse */
+.submit-btn:hover {
+    background-color: #a65a12;  /* Cor de fundo do botão ao passar o mouse */
+}
