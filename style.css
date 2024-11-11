@@ -29,9 +29,11 @@ body {
     background-color: #F9F9F9;
     text-align: center;
     font-size: 2.5rem;
-    width: calc(100% - 20px); /* Reduz a largura total para evitar espaço extra */
+    width: calc(100% - 20px);
+    /* Reduz a largura total para evitar espaço extra */
     max-width: 100%;
-    margin: 50px auto; /* Centraliza a div */
+    margin: 50px auto;
+    /* Centraliza a div */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -39,7 +41,7 @@ body {
 
 
 /* Estilo para os itens dentro da #div2 */
-#div2 > div {
+#div2>div {
     background-color: #e0e0e0;
     padding: 20px;
     border-radius: 5px;
@@ -51,14 +53,19 @@ body {
 #div3 {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Alinha o conteúdo na parte superior */
-    align-items: flex-start;     /* Alinha o texto à esquerda */
-    height: 300px;
+    justify-content: flex-start;
+    /* Alinha o conteúdo na parte superior */
+    align-items: flex-start;
+    /* Alinha o texto à esquerda */
+    height: 170px;
     font-size: 2.3rem;
     width: 100%;
-    padding-left: 40px;          /* Ajuste o valor conforme necessário */
-    text-align: left;            /* Alinha o texto à esquerda */
-    margin-top: 100px;           /* Aumenta o valor para mover mais para baixo */
+    padding-left: 40px;
+    /* Ajuste o valor conforme necessário */
+    text-align: left;
+    /* Alinha o texto à esquerda */
+    margin-top: 100px;
+    /* Aumenta o valor para mover mais para baixo */
     font-size: 43px;
 }
 
@@ -75,12 +82,14 @@ body {
 
 /* Estilo para imagens dentro de .div4 */
 .div4 img {
-    max-width: 150%; /* Aumenta o tamanho da imagem além do contêiner */
+    max-width: 150%;
+    /* Aumenta o tamanho da imagem além do contêiner */
     height: auto;
     margin-top: 250px;
     margin-left: -100px;
     padding-right: 30px;
-    object-fit: contain; /* Garante que a imagem mantenha suas proporções */
+    object-fit: contain;
+    /* Garante que a imagem mantenha suas proporções */
 }
 
 /* Estilo para .div5 */
@@ -121,21 +130,32 @@ body {
 
 /* Estilo para o botão de envio */
 .submit-btn {
-    background-color: #C07212;  /* Cor do fundo do botão */
-    color: white;                /* Cor do texto do botão */
-    font-size: 22px;             /* Aumenta o tamanho da fonte */
-    padding: 15px 30px;          /* Aumenta o preenchimento interno do botão */
-    border: none;                /* Remove a borda padrão */
-    border-radius: 5px;          /* Bordas arredondadas */
-    cursor: pointer;            /* Cursor de mãozinha para indicar interatividade */
-    margin-top: 40px;            /* Aumenta o espaço entre os inputs e o botão */
-    width: 40%;                  /* Aumenta a largura do botão */
-    text-align: center;          /* Alinha o texto no centro do botão */
+    background-color: #C07212;
+    /* Cor do fundo do botão */
+    color: white;
+    /* Cor do texto do botão */
+    font-size: 22px;
+    /* Aumenta o tamanho da fonte */
+    padding: 15px 30px;
+    /* Aumenta o preenchimento interno do botão */
+    border: none;
+    /* Remove a borda padrão */
+    border-radius: 5px;
+    /* Bordas arredondadas */
+    cursor: pointer;
+    /* Cursor de mãozinha para indicar interatividade */
+    margin-top: 40px;
+    /* Aumenta o espaço entre os inputs e o botão */
+    width: 40%;
+    /* Aumenta a largura do botão */
+    text-align: center;
+    /* Alinha o texto no centro do botão */
 }
 
 /* Efeito visual ao passar o mouse */
 .submit-btn:hover {
-    background-color: #a65a12;  /* Cor de fundo do botão ao passar o mouse */
+    background-color: #a65a12;
+    /* Cor de fundo do botão ao passar o mouse */
 }
 
 .submit-btn:hover {
@@ -156,4 +176,3 @@ body {
 .link-btn:hover {
     background-color: #a65a12;
 }
-
