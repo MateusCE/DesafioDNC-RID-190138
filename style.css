@@ -1,108 +1,140 @@
-#div{
+/* Reset e estilos gerais */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #FFFFFF;
+    background-color: #303030;
+}
+
+/* Estilo da #div */
+#div {
     background-color: #303030;
     padding: 100px;
-    margin-top: -10px;
-    margin-left: -10px;
-    margin-right: -10px;
-    color: #FFFFFF;
-    font-size: 40px;
+    color: #FFF;
+    font-size: 2.5rem;
+    margin: 0 -10px;
 }
-#div2{
+
+/* Layout com grid para #div2 */
+#div2 {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Três colunas de igual largura */
-    gap: 2px; /* Espaçamento entre as colunas */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Colunas responsivas */
+    gap: 20px; /* Espaçamento adequado entre os itens */
     padding: 50px;
-    background-color: #FFFFFF;
-    text-align: center; /* Centraliza o texto dentro de cada coluna */
-    font-size: 55px;
+    background-color: #F9F9F9;
     text-align: center;
+    font-size: 2.5rem;
     margin-top: 50px;
+    border-radius: 10px; /* Bordas arredondadas para um visual moderno */
 }
-#div3{
-    margin-top: 300px;
+
+/* Estilo para os itens dentro da #div2 */
+#div2 > div {
+    background-color: #e0e0e0;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #000000;
+}
+
+/* Layout com flex para #div3 */
+#div3 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 300px; /* Defina a altura total desejada */
-    font-size: 37px;
-    width: 100%;
-    margin-left: 60px;
+    height: 300px;
+    font-size: 2.3rem;
+    padding-left: 60px;
 }
-.div4{
+
+/* Estilo para .div4 */
+.div4 {
     margin-top: -600px;
-    margin-left: 1000px;
-    padding: 300px;
-    padding-bottom: 150px;
-    padding-top: 100px;
-    padding-left: 100px;
-    flex-direction: column;
+    margin-left: auto;
+    padding: 100px 100px 150px 300px;
     width: 40%;
-    height: auto;
-    position: relative; 
+    position: relative;
 }
 
+/* Estilo para imagens dentro de .div4 */
 .div4 img {
-    width: 100%;  
-    height: auto; 
-}
-.div5{
-    width: 100%;
-    height: 638px;
-    top: 1478px;   
-    background-color: #303030; 
-    font-size: 35px;
-    text-align: center;   
-}
-.div5 h2 {
-    font-size: 50px;
-    text-align: center;
-    padding-top: 100px;  /* Ajuste o valor conforme necessário */
-    color: #FFFFFF;
-    margin-top: 0px;
-}
-.div5 {
-    width: 100%;
-    height: 638px;
-    top: 1478px;
-    background-color: #303030;
-    font-size: 35px;
-    text-align: center;
-    padding-top: 100px;
-    color: white;
-    display: flex;            /* Usando flexbox para alinhar os elementos */
-    flex-direction: column;   /* Empilha os inputs na vertical */
-    align-items: center;      /* Centraliza os itens horizontalmente */
+    max-width: 150%; /* Aumenta o tamanho da imagem além do contêiner */
+    height: auto;
+    margin-top: 250px;
+    margin-left: -50px;
+    padding-right: 30px;
+    object-fit: contain; /* Garante que a imagem mantenha suas proporções */
 }
 
+/* Estilo para .div5 */
+.div5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 100px 20px;
+    background-color: #303030;
+    color: #FFF;
+    font-size: 2.2rem;
+}
+
+/* Estilo para o título dentro de .div5 */
+.div5 h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+/* Estilo para inputs */
 .div5 input {
-    width: 30%;              /* Aumenta a largura dos inputs */
-    height: 40px;            /* Aumenta a altura dos inputs */
-    padding: 10px;           /* Adiciona um pouco de preenchimento dentro dos inputs */
-    margin: 15px 0;          /* Espaço entre os inputs */
-    font-size: 18px;         /* Aumenta o tamanho da fonte dentro dos inputs */
-    border: 2px solid #fff;
+    width: 30%;
+    height: 40px;
+    padding: 10px;
+    margin: 15px 0;
+    font-size: 1.1rem;
+    border: 2px solid #FFF;
     border-radius: 5px;
     background-color: #e7dddd;
-    color: rgb(0, 0, 0);
+    color: #000;
 }
 
 .div5 input::placeholder {
     color: #bbb;
 }
+
+/* Estilo para o botão de envio */
 .submit-btn {
-    background-color: #C07212;  /* Cor do fundo do botão */
-    color: white;                /* Cor do texto do botão */
-    font-size: 18px;             /* Tamanho da fonte */
-    padding: 10px 20px;          /* Preenchimento interno do botão */
-    border: none;                /* Remove a borda padrão */
-    border-radius: 5px;          /* Bordas arredondadas */
-    cursor: pointer;            /* Cursor de mãozinha para indicar interatividade */
-    margin-top: 20px;            /* Espaço entre os inputs e o botão */
-    width: 30%;                  /* Largura do botão */
-    text-align: center;          /* Alinha o texto no centro do botão */
+    background-color: #C07212;
+    color: #FFF;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 30%;
 }
 
-/* Efeito visual ao passar o mouse */
 .submit-btn:hover {
-    background-color: #a65a12;  /* Cor de fundo do botão ao passar o mouse */
+    background-color: #a65a12;
 }
+
+/* Estilo para o link da planilha */
+.link-btn {
+    display: inline-block;
+    background-color: #C07212;
+    color: #FFF;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.link-btn:hover {
+    background-color: #a65a12;
+}
+
