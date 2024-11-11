@@ -23,15 +23,20 @@ body {
 /* Layout com grid para #div2 */
 #div2 {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Colunas responsivas */
-    gap: 20px; /* Espaçamento adequado entre os itens */
-    padding: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 40px;
     background-color: #F9F9F9;
     text-align: center;
     font-size: 2.5rem;
-    margin-top: 50px;
-    border-radius: 10px; /* Bordas arredondadas para um visual moderno */
+    width: calc(100% - 20px); /* Reduz a largura total para evitar espaço extra */
+    max-width: 100%;
+    margin: 50px auto; /* Centraliza a div */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+
 
 /* Estilo para os itens dentro da #div2 */
 #div2 > div {
@@ -46,11 +51,18 @@ body {
 #div3 {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start; /* Alinha o conteúdo na parte superior */
+    align-items: flex-start;     /* Alinha o texto à esquerda */
     height: 300px;
     font-size: 2.3rem;
-    padding-left: 60px;
+    width: 100%;
+    padding-left: 40px;          /* Ajuste o valor conforme necessário */
+    text-align: left;            /* Alinha o texto à esquerda */
+    margin-top: 100px;           /* Aumenta o valor para mover mais para baixo */
+    font-size: 43px;
 }
+
+
 
 /* Estilo para .div4 */
 .div4 {
@@ -66,7 +78,7 @@ body {
     max-width: 150%; /* Aumenta o tamanho da imagem além do contêiner */
     height: auto;
     margin-top: 250px;
-    margin-left: -50px;
+    margin-left: -100px;
     padding-right: 30px;
     object-fit: contain; /* Garante que a imagem mantenha suas proporções */
 }
@@ -109,14 +121,21 @@ body {
 
 /* Estilo para o botão de envio */
 .submit-btn {
-    background-color: #C07212;
-    color: #FFF;
-    font-size: 1.1rem;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 30%;
+    background-color: #C07212;  /* Cor do fundo do botão */
+    color: white;                /* Cor do texto do botão */
+    font-size: 22px;             /* Aumenta o tamanho da fonte */
+    padding: 15px 30px;          /* Aumenta o preenchimento interno do botão */
+    border: none;                /* Remove a borda padrão */
+    border-radius: 5px;          /* Bordas arredondadas */
+    cursor: pointer;            /* Cursor de mãozinha para indicar interatividade */
+    margin-top: 40px;            /* Aumenta o espaço entre os inputs e o botão */
+    width: 40%;                  /* Aumenta a largura do botão */
+    text-align: center;          /* Alinha o texto no centro do botão */
+}
+
+/* Efeito visual ao passar o mouse */
+.submit-btn:hover {
+    background-color: #a65a12;  /* Cor de fundo do botão ao passar o mouse */
 }
 
 .submit-btn:hover {
