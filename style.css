@@ -1,23 +1,37 @@
 /* Reset e estilos gerais */
-* {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+:root {
+    --main-bg: #303030;
+    --text-color: #FFF;
+    --accent-color: #C07212;
+    --font-family: Arial, sans-serif;
+    --font-size-large: clamp(2rem, 2.5vw, 2.5rem);
+    --font-size-medium: clamp(1.2rem, 2vw, 1.5rem);
+    --input-bg: #e7dddd;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo geral do corpo */
 body {
-    font-family: Arial, sans-serif;
-    color: #FFFFFF;
-    background-color: #303030;
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background-color: var(--main-bg);
 }
 
 /* Estilo da #div */
 #div {
-    background-color: #303030;
+    background-color: var(--main-bg);
     padding: 100px;
-    color: #FFF;
-    font-size: 2.5rem;
-    margin: 0 -10px;
+    color: var(--text-color);
+    font-size: var(--font-size-large);
+    margin: 0;
 }
 
 /* Layout com grid para #div2 */
@@ -28,69 +42,49 @@ body {
     padding: 40px;
     background-color: #F9F9F9;
     text-align: center;
-    font-size: 2.5rem;
-    width: calc(100% - 20px);
-    /* Reduz a largura total para evitar espaço extra */
+    font-size: var(--font-size-large);
     max-width: 100%;
     margin: 50px auto;
-    /* Centraliza a div */
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow);
 }
 
-
-
-/* Estilo para os itens dentro da #div2 */
-#div2>div {
+/* Estilo para itens dentro de #div2 */
+#div2 > div {
     background-color: #e0e0e0;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    color: #000000;
+    box-shadow: var(--shadow);
+    color: #000;
 }
 
-/* Layout com flex para #div3 */
+/* Layout flex para #div3 */
 #div3 {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    /* Alinha o conteúdo na parte superior */
     align-items: flex-start;
-    /* Alinha o texto à esquerda */
-    height: 170px;
-    font-size: 2.3rem;
-    width: 100%;
-    padding-left: 40px;
-    /* Ajuste o valor conforme necessário */
-    text-align: left;
-    /* Alinha o texto à esquerda */
+    height: auto;
+    padding: 0 40px;
     margin-top: 100px;
-    /* Aumenta o valor para mover mais para baixo */
-    font-size: 43px;
+    font-size: 40px;
+    text-align: left;
 }
-
-
 
 /* Estilo para .div4 */
 .div4 {
-    margin-top: -600px;
-    margin-bottom: -200px;
-    margin-left: auto;
-    padding: 100px 100px 150px 300px;
+    padding: 100px 40px;
     width: 40%;
+    margin: -600px auto 0;
     position: relative;
 }
 
 /* Estilo para imagens dentro de .div4 */
 .div4 img {
     max-width: 150%;
-    /* Aumenta o tamanho da imagem além do contêiner */
     height: auto;
     margin-top: 250px;
-    margin-left: -100px;
-    padding-right: 30px;
+    margin-left: 700px;
     object-fit: contain;
-    /* Garante que a imagem mantenha suas proporções */
 }
 
 /* Estilo para .div5 */
@@ -98,30 +92,29 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    height: auto;
     padding: 100px 20px;
-    background-color: #303030;
-    color: #FFF;
-    font-size: 2.2rem;
+    background-color: var(--main-bg);
+    color: var(--text-color);
+    font-size: var(--font-size-medium);
 }
 
 /* Estilo para o título dentro de .div5 */
 .div5 h2 {
-    font-size: 3rem;
+    font-size: clamp(2.5rem, 3vw, 3rem);
     margin-bottom: 20px;
 }
 
 /* Estilo para inputs */
 .div5 input {
-    width: 30%;
-    height: 40px;
+    width: 90%;
+    max-width: 500px;
+    height: 50px;
     padding: 10px;
-    margin: 15px 0;
-    font-size: 1.1rem;
-    border: 2px solid #FFF;
+    margin: 10px 0;
+    font-size: var(--font-size-medium);
+    border: 2px solid var(--text-color);
     border-radius: 5px;
-    background-color: #e7dddd;
+    background-color: var(--input-bg);
     color: #000;
 }
 
@@ -131,32 +124,16 @@ body {
 
 /* Estilo para o botão de envio */
 .submit-btn {
-    background-color: #C07212;
-    /* Cor do fundo do botão */
-    color: white;
-    /* Cor do texto do botão */
-    font-size: 22px;
-    /* Aumenta o tamanho da fonte */
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    font-size: var(--font-size-medium);
     padding: 15px 30px;
-    /* Aumenta o preenchimento interno do botão */
     border: none;
-    /* Remove a borda padrão */
     border-radius: 5px;
-    /* Bordas arredondadas */
     cursor: pointer;
-    /* Cursor de mãozinha para indicar interatividade */
     margin-top: 40px;
-    /* Aumenta o espaço entre os inputs e o botão */
-    width: 40%;
-    /* Aumenta a largura do botão */
-    text-align: center;
-    /* Alinha o texto no centro do botão */
-}
-
-/* Efeito visual ao passar o mouse */
-.submit-btn:hover {
-    background-color: #a65a12;
-    /* Cor de fundo do botão ao passar o mouse */
+    width: 90%;
+    max-width: 500px;
 }
 
 .submit-btn:hover {
@@ -166,14 +143,9 @@ body {
 /* Estilo para o link da planilha */
 .link-btn {
     display: inline-block;
-    background-color: #C07212;
-    color: #FFF;
+    background-color: var(--accent-color);
+    color: var(--text-color);
     padding: 10px 20px;
     border-radius: 5px;
-    text-decoration: none;
-    margin-top: 20px;
-}
-
-.link-btn:hover {
-    background-color: #a65a12;
+    text-decorat
 }
