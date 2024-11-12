@@ -1,7 +1,5 @@
 /* Reset e estilos gerais */
-*,
-*::before,
-*::after {
+*{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -96,6 +94,7 @@ body {
     background-color: var(--main-bg);
     color: var(--text-color);
     font-size: var(--font-size-medium);
+    margin-top: -170px;
 }
 
 /* Estilo para o título dentro de .div5 */
