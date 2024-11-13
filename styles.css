@@ -66,7 +66,8 @@ body {
     margin-top: 100px;
     font-size: 40px;
     text-align: left;
-}
+ }
+ 
 
 /* Estilo para .div4 */
 .div4 {
@@ -80,7 +81,7 @@ body {
 .div4 img {
     max-width: 150%;
     height: auto;
-    margin-top: 250px;
+    margin-top: 150px;
     margin-left: 700px;
     object-fit: contain;
 }
@@ -146,5 +147,15 @@ body {
     color: var(--text-color);
     padding: 10px 20px;
     border-radius: 5px;
-    text-decorat
+    
+}
+.slide-in {
+    opacity: 0;
+    transform: translateX(50%);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.slide-in.visible {
+    opacity: 1;
+    transform: translateX(0);
 }
